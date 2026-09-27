@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive enterprise dashboard design-token demo.">
+  <title>Responsive Design System Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header glass">
+    <a class="brand" href="#">Acme Dashboard</a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#activity">Activity</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
+      Toggle theme
+    </button>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar glass" aria-label="Dashboard navigation">
+      <h2>Workspace</h2>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#activity">Activity</a>
+        <a href="#settings">Settings</a>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <header class="page-heading">
+        <p class="eyebrow">Operations</p>
+        <h1>Responsive dashboard</h1>
+        <p>A mobile-first design-token demonstration using CSS Grid, Flexbox and modern visual effects.</p>
+      </header>
+
+      <section id="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h2 id="overview-title">Key metrics</h2>
+          </div>
+          <button class="button secondary" type="button">Export</button>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card glass">
+            <span>Active users</span>
+            <strong>12,480</strong>
+            <small>+8.4% this month</small>
+          </article>
+          <article class="metric-card glass">
+            <span>Revenue</span>
+            <strong>$84.2K</strong>
+            <small>+5.1% this month</small>
+          </article>
+          <article class="metric-card glass">
+            <span>Open tasks</span>
+            <strong>248</strong>
+            <small>32 require attention</small>
+          </article>
+          <article class="metric-card glass">
+            <span>Uptime</span>
+            <strong>99.98%</strong>
+            <small>Current reporting period</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="analytics" class="content-grid" aria-labelledby="analytics-title">
+        <article class="panel glass">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Analytics</p>
+              <h2 id="analytics-title">Performance</h2>
+            </div>
+            <span class="badge">Live</span>
+          </div>
+          <div class="chart-placeholder" role="img" aria-label="Illustrative performance chart placeholder">
+            <span>Chart area</span>
+          </div>
+        </article>
+
+        <aside class="panel glass" aria-labelledby="summary-title">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">System health</h2>
+          <ul class="health-list">
+            <li><span>API</span><strong>Healthy</strong></li>
+            <li><span>Database</span><strong>Healthy</strong></li>
+            <li><span>Queue</span><strong>Healthy</strong></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="activity" class="panel glass" aria-labelledby="activity-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Recent</p>
+            <h2 id="activity-title">Activity</h2>
+          </div>
+          <a href="#">View all</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">Recent activity</caption>
+            <thead>
+              <tr><th scope="col">Event</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Updated</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Quarterly report</th><td>Operations</td><td>Complete</td><td>Today</td></tr>
+              <tr><th scope="row">Access review</th><td>Security</td><td>Pending</td><td>Today</td></tr>
+              <tr><th scope="row">Usage export</th><td>Analytics</td><td>Complete</td><td>Yesterday</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="settings" class="panel glass" aria-labelledby="settings-title">
+        <p class="eyebrow">Preferences</p>
+        <h2 id="settings-title">Responsive settings form</h2>
+        <form class="form-grid">
+          <label>
+            Display name
+            <input type="text" name="name" autocomplete="name">
+          </label>
+          <label>
+            Email address
+            <input type="email" name="email" autocomplete="email">
+          </label>
+          <label class="form-wide">
+            Notes
+            <textarea name="notes" rows="4"></textarea>
+          </label>
+          <button class="button form-wide" type="submit">Save changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2026 Acme Dashboard</span>
+    <span>Responsive design-token demo</span>
+  </footer>
+</body>
+</html>
